@@ -6,12 +6,25 @@ body {
     overflow-x: hidden;
 }
 
+.slideshow {
+    position: relative; /* necessary to absolutely position the images inside */
+    width: 500px; /* same as the images inside */
+    height: 100px;
+}
+.slideshow img {
+    position: absolute;
+    display: none;
+}
+.slideshow img:first-child {
+    display: block; /* overrides the previous style */
+}
+
 #wrapper {
     width:100%;
     height:100%;
     position:absolute;
     top:0;left:0;
-    background-color:#ccc;
+    background-color: #ffffff;
     overflow:hidden;
 }
 
@@ -31,11 +44,7 @@ body {
 
 
 .content {
-    width:400px;
-    height:300px;
-    top:20%;
-    margin:0 auto;
-    background-color:#aaa;
+    background-color: #ffffff;
     position:relative;
 }
 
