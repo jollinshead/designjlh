@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+aside {
+    background: #90EE90;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 120px;
+}
+ul {
+    list-style: none;
+}
+section {
+    background: #ADD8E6;
+    height: 100%;
+    margin-top: 60px;
+}
+header {
+    background: #FF0;
+    height: 60px;
+    left: 0;
+    margin-left: 120px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.container {
+    left: 0;
+    margin-left: 120px;
+    min-height: 100%;
+    position: relative;
+    text-align: center;
+}
+figure {
+    margin: 0;
+}
+img {
+    height: 60px;
+    width: 100%;
+}
+
+.vertical-text {
+    transform: rotate(270deg);
+    transform-origin: left top 0;
+    float: left;
+}
