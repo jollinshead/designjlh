@@ -3,44 +3,16 @@
         "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-    <title>Scroll Horizontally</title>
+    <title>designjlh</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="js/jquery-1.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/headers.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsiveslides.css">
-    <script src="js/responsiveslides.min.js"></script>
-    <script>
-        // You can also use "$(window).load(function() {"
-        $(function () {
-
-            // Slideshow 4
-            $("#slider4").responsiveSlides({
-                auto: false,
-                pager: false,
-                nav: true,
-                speed: 500,
-                prevText: "<<",   // String: Text for the "previous" button
-                nextText: ">>",       // String: Text for the "next" button
-                maxwidth: 600,           // Integer: Max-width of the slideshow, in pixels
-                namespace: "callbacks",
-                before: function () {
-                    $('.events').append("<li>before event fired.</li>");
-                },
-                after: function () {
-                    $('.events').append("<li>after event fired.</li>");
-                }
-            });
-        });
-
-        $(document).ready(function(){
-    $("button").click(function(){
-        $("p").toggle(300);
-    });
-});
-
-    </script>
+    <script src="js/responsiveslides.js"></script>
+    <script src="js/custom_slide.js"></script>
+    <script src="js/index.js"></script>
 
 
 
@@ -52,46 +24,51 @@
         <div>
         </div>
         <ul>
-            <li><div class="vertical-text">designjlh</div></li>
+            <li><div class="vertical-text hidden-link">designjlh</div></li>
         </ul>
     </nav>
 </aside>
 <header></header>
 
 <div class="container">
+    <div>
+    <div class="navigation-keys">
+        <a id='Prev' href='#' class='callbacks_nav callbacks1_nav prev hidden-link left-arrow'> ← </a>
+        <a id='More' href='#' class='toggle-text hidden-link down-arrow'> ↓ </a>
+        <a id='Next' href='#' class='callbacks_nav callbacks1_nav next hidden-link right-arrow'> → </a>
+    </div>
+    <div class="">
+        <ul class="rslides" id="slider4">
+            <li>
+                <br><img class="work" src="img/ineffable.jpg" alt=""><br><br>
+                <p class="img-desc">data="desc/ineffable.txt"></p>
+            </li>
+            <li>
+                <br><img class="work" src="img/dot.png" alt=""><br><br>
+                <p class="img-desc">dot .</p>
+            </li>
+            <li>
+                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e3d92441948995.57bb16d716dd5.jpg" alt=""><br><br>
+                <p class="img-desc">la mode posters</p>
+            </li>
+            <li>
+                <br><iframe class="work" src="https://www.ccv.adobe.com/v1/player/ccv/B3sQwSahJIa/embed" frameborder="0" allowfullscreen=""></iframe><br><br>
+                <p class="img-desc">carmen animation <br><br> promotional animation for carmen @ royal opera house, score by georges bizet</p>
+            </li>
+            <li>
+                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/e175ad41950471.57bb21031f433.jpg" alt=""><br><br>
+                <p class="img-desc">pantone</p>
+            </li>
+            <li>
+                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e3d92441948995.57bb16d716dd5.jpg" alt=""><br><br>
+                <p class="img-desc">carmen animation <br><br> promotional animation for carmen @ royal opera house, score by georges bizet</p>
+            </li> <li>
+            <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e3d92441948995.57bb16d716dd5.jpg" alt=""><br><br>
+            <p class="img-desc">carmen animation <br><br> promotional animation for carmen @ royal opera house, score by georges bizet</p>
+        </li>
 
-    <div>Scroll</div>
-    <div>Scroll</div>
-    <div>Scroll</div>
-    <div class="callbacks_container">
-        <ul class="rslides" id="slider4" class="slideshow">
-            <li>
-                <br>
-                <img src="img/ineffable.jpg" alt="">
-                <button>+</button>
-                <p>This is a paragraph with little content.
-                blah blah blah............. sfasf
-                asfdasfdasdfasdfasdf</p>
-            </li>
-            <li>
-                <br>
-                <img src="img/dot.png" alt="">
-                <br>
-                <button>+</button>
-                <p>This is a paragraph with little content.
-                    blah blah blah............. sfasf
-                    asfdasfdasdfasdfasdf</p>
-            </li>
-            <li>
-                <br>
-                <img src="img/ineffable.jpg" alt="">
-                <br>
-                <button>+</button>
-                <p>This is a paragraph with little content.
-                    blah blah blah............. sfasf
-                    asfdasfdasdfasdfasdf</p>
-            </li>
         </ul>
+    </div>
     </div>
 
 </div>

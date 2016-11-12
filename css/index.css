@@ -6,46 +6,6 @@ body {
     overflow-x: hidden;
 }
 
-.slideshow {
-    position: relative; /* necessary to absolutely position the images inside */
-    border-radius: 15px;
-        max-width: 500px;
-        max-height:  400px;
-        padding: 5px;
-
-        margin-left: 160px;
-        margin-top: 160px;
-
-         width: 500px;
-         height:  400px;
-
-        background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.slideshow img {
-    position: absolute;
-    display: none;
-}
-.slideshow img:first-child {
-    display: block; /* overrides the previous style */
-}
-
-#wrapper {
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:0;left:0;
-    background-color: #ffffff;
-    overflow:hidden;
-}
-
-#mask {
-    width:500%;
-    height:100%;
-
-    background-color:#ffffff;
-}
-
 .item {
     width:20%;
     height:100%;

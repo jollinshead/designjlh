@@ -20,10 +20,10 @@
       "nav": false,             // Boolean: Show navigation, true or false
       "random": false,          // Boolean: Randomize the order of the slides, true or false
       "pause": false,           // Boolean: Pause on hover, true or false
-      "pauseControls": true,    // Boolean: Pause when hovering controls, true or false
+      "pauseControls": false,    // Boolean: Pause when hovering controls, true or false
       "prevText": "Prev",   // String: Text for the "previous" button
       "nextText": "Next",       // String: Text for the "next" button
-      "maxwidth": "600",           // Integer: Max-width of the slideshow, in pixels
+      "maxwidth": "500",           // Integer: Max-width of the slideshow, in pixels
       "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
       "manualControls": "",     // Selector: Declare custom pager navigation
       "namespace": "rslides",   // String: change the default namespace used
@@ -308,14 +308,14 @@
         // Navigation
         if (settings.nav) {
           var navMarkup =
-            "<a href='#' class='" + navClass + " prev' style='color:black;'>" + settings.prevText + "</a>" +
-            "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
+            "<a href='#' class='" + navClass + " prev hidden-link'> </a>" +
+            "<a href='#' class='" + navClass + " next hidden-link'> </a>";
 
           // Inject navigation
           if (options.navContainer) {
-            $(settings.navContainer).append(navMarkup);
+            $(settings.navContainer).prepend(navMarkup);
           } else {
-            $this.after(navMarkup);
+            $this.before(navMarkup);
           }
 
           var $trigger = $("." + namespaceIdx + "_nav"),
@@ -343,7 +343,7 @@
 
             // Determine where to slide
             var idx = $slide.index($visibleClass),
-              prevIdx = idx - 1,
+              prevIdx = idx - 1 < 0 ? length - 1 : idx - 1,
               nextIdx = idx + 1 < length ? index + 1 : 0;
 
             // Go to slide
