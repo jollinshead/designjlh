@@ -8,8 +8,19 @@ body {
 
 .slideshow {
     position: relative; /* necessary to absolutely position the images inside */
-    width: 500px; /* same as the images inside */
-    height: 100px;
+    border-radius: 15px;
+        max-width: 500px;
+        max-height:  400px;
+        padding: 5px;
+
+        margin-left: 160px;
+        margin-top: 160px;
+
+         width: 500px;
+         height:  400px;
+
+        background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .slideshow img {
     position: absolute;
@@ -32,7 +43,7 @@ body {
     width:500%;
     height:100%;
 
-    background-color:#eee;
+    background-color:#ffffff;
 }
 
 .item {
@@ -49,7 +60,7 @@ body {
 }
 
 .selected {
-    background:#fff;
+    background:#ffffff;
     font-weight:700;
 }
 

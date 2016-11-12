@@ -5,10 +5,11 @@
 <head>
     <title>Scroll Horizontally</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="js/jquery-1.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/headers.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/responsiveslides.css">
-    <script src="js/jquery-1.3.1.min.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script>
         // You can also use "$(window).load(function() {"
@@ -20,6 +21,9 @@
                 pager: false,
                 nav: true,
                 speed: 500,
+                prevText: "<<",   // String: Text for the "previous" button
+                nextText: ">>",       // String: Text for the "next" button
+                maxwidth: 600,           // Integer: Max-width of the slideshow, in pixels
                 namespace: "callbacks",
                 before: function () {
                     $('.events').append("<li>before event fired.</li>");
@@ -28,26 +32,31 @@
                     $('.events').append("<li>after event fired.</li>");
                 }
             });
-
         });
+
+        $(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle(300);
+    });
+});
+
     </script>
+
+
 
 </head>
 
 
 <aside>
     <nav>
-        <div class="nav-header">
-            <figure>
-                <img src="http://placehold.it/140x100" alt="" />
-            </figure>
+        <div>
         </div>
         <ul>
-            <li><div class="vertical-text">about</div></li>
+            <li><div class="vertical-text">designjlh</div></li>
         </ul>
     </nav>
 </aside>
-<header>Header Centered</header>
+<header></header>
 
 <div class="container">
 
@@ -55,18 +64,32 @@
     <div>Scroll</div>
     <div>Scroll</div>
     <div class="callbacks_container">
-        <ul class="rslides" id="slider4">
+        <ul class="rslides" id="slider4" class="slideshow">
             <li>
-                <img src="img/ineffable.jpg" alt="" style="width:400px;height:600px;">
-                <p class="caption">This is a caption</p>
+                <br>
+                <img src="img/ineffable.jpg" alt="">
+                <button>+</button>
+                <p>This is a paragraph with little content.
+                blah blah blah............. sfasf
+                asfdasfdasdfasdfasdf</p>
             </li>
             <li>
-                <img src="img/dot.png" alt="" style="width:400px;height:600px;">
-                <p class="caption">This is another caption</p>
+                <br>
+                <img src="img/dot.png" alt="">
+                <br>
+                <button>+</button>
+                <p>This is a paragraph with little content.
+                    blah blah blah............. sfasf
+                    asfdasfdasdfasdfasdf</p>
             </li>
             <li>
-                <img src="img/ineffable.jpg" alt="" style="width:400px;height:600px;">
-                <p class="caption">The third caption</p>
+                <br>
+                <img src="img/ineffable.jpg" alt="">
+                <br>
+                <button>+</button>
+                <p>This is a paragraph with little content.
+                    blah blah blah............. sfasf
+                    asfdasfdasdfasdfasdf</p>
             </li>
         </ul>
     </div>

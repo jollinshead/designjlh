@@ -21,9 +21,9 @@
       "random": false,          // Boolean: Randomize the order of the slides, true or false
       "pause": false,           // Boolean: Pause on hover, true or false
       "pauseControls": true,    // Boolean: Pause when hovering controls, true or false
-      "prevText": "<<",   // String: Text for the "previous" button
-      "nextText": ">>",       // String: Text for the "next" button
-      "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
+      "prevText": "Prev",   // String: Text for the "previous" button
+      "nextText": "Next",       // String: Text for the "next" button
+      "maxwidth": "600",           // Integer: Max-width of the slideshow, in pixels
       "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
       "manualControls": "",     // Selector: Declare custom pager navigation
       "namespace": "rslides",   // String: change the default namespace used
@@ -308,7 +308,7 @@
         // Navigation
         if (settings.nav) {
           var navMarkup =
-            "<a href='#' class='" + navClass + " prev'>" + settings.prevText + "</a>" +
+            "<a href='#' class='" + navClass + " prev' style='color:black;'>" + settings.prevText + "</a>" +
             "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
 
           // Inject navigation
