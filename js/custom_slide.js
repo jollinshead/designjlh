@@ -9,7 +9,7 @@
                 speed: 500,
                 prevText: "←",   // String: Text for the "previous" button
                 nextText: "→",       // String: Text for the "next" button
-                maxwidth: 500,           // Integer: Max-width of the slideshow, in pixels
+                maxwidth: 400,           // Integer: Max-width of the slideshow, in pixels
                 namespace: "callbacks",
                 before: function () {
                     $('.events').append("<li>before event fired.</li>");

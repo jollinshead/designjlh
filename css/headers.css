@@ -41,7 +41,9 @@ figure {
 .img-title {
     font-size: 0.8em;
     overflow: hidden;
+    word-wrap: break-word;
     font-weight: bold;
+    max-width: 350px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
@@ -49,7 +51,7 @@ figure {
     font-size: 0.75em;
      overflow: hidden;
      word-wrap: break-word;
-     max-width: 400px;
+     max-width: 350px;
      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
