@@ -2,6 +2,7 @@
 
             $(".toggle-text").click(function(){
                     $(".img-desc").toggle(200);
+                    $(".img-title").toggle(200);
                });
         });
 
@@ -15,6 +16,12 @@
             }
 
             else if (event.keyCode == 40) {
-                            document.getElementById('More').click();
-                        }
+                 document.getElementById('More').click();
+            }
         }, true);
+
+
+        $(function () {
+            $( ".img-desc" ).hide();
+            $( ".img-title").hide();
+        })();

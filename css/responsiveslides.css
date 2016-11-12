@@ -1,31 +1,27 @@
 /*! http://responsiveslides.com v1.55 by @viljamis */
 
 .rslides {
+  text-align: center;
   position: relative;
   list-style: none;
   overflow: hidden;
   display: inline-block;
   margin-top: 1px;
-   max-width: 800px;
-    width: 800px;
   }
 
 .rslides li {
   -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  left: 0;
-  top: 0;
+    text-align: center;
+    position: relative;
+    margin-left: 29px;
   }
 
 .rslides li:first-child {
-  position: relative;
   display: block;
   float: left;
   }
 
 .rslides img {
-
   }
 
 

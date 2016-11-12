@@ -2,6 +2,7 @@ html {
     height: 100%;
     margin: 0;
 }
+
 aside {
     background: #FFFFFF;
     height: 100%;
@@ -12,6 +13,9 @@ aside {
 }
 ul {
     list-style: none;
+    position: relative;
+    text-align: center;
+    display: inline-block;
 }
 
 
@@ -35,15 +39,14 @@ figure {
 }
 
 .img-title {
-    padding: 1px;
-    font-size: 0.95em;
+    font-size: 0.8em;
     overflow: hidden;
+    font-weight: bold;
     font-family: "Lucida Console", Times, serif;
 }
 
 .img-desc {
-    font-size: 0.85em;
-    padding: 1px;
+    font-size: 0.75em;
      overflow: hidden;
      word-wrap: break-word;
      max-width: 400px;
@@ -80,7 +83,7 @@ font-size: 1.2em;
 }
 
 .navigation-keys {
-  position: relative;
+
   list-style: none;
   overflow: hidden;
   max-width: 400px;
@@ -95,4 +98,13 @@ font-size: 1.2em;
   width: 400px;
   height:  600px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.uniform-width {
+    max-width: 538px;
+    width: 538px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
