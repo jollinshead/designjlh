@@ -259,15 +259,6 @@
           }
         };
 
-        // Pause on hover
-        if (settings.pause) {
-          $this.hover(function () {
-            clearInterval(rotate);
-          }, function () {
-            restartCycle();
-          });
-        }
-
         // Pager click event handler
         if (settings.pager || settings.manualControls) {
           $tabs.bind("click", function (e) {
@@ -368,23 +359,6 @@
         }
 
       }
-
-      // Max-width fallback
-      if (typeof document.body.style.maxWidth === "undefined" && options.maxwidth) {
-        var widthSupport = function () {
-          $this.css("width", "100%");
-          if ($this.width() > maxw) {
-            $this.css("width", maxw);
-          }
-        };
-
-        // Init fallback
-        widthSupport();
-        $(window).bind("resize", function () {
-          widthSupport();
-        });
-      }
-
     });
 
   };

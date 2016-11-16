@@ -6,6 +6,15 @@
                });
         });
 
+        $(function () {
+
+                    $(".toggle-about").click(function(){
+                            $(".container").fadeToggle( "slow", "linear" );
+                       });
+                }(jQuery));
+
+
+
         document.addEventListener('keydown', function(event) {
             if (event.keyCode == 37) {
                 document.getElementById('Prev').click();
