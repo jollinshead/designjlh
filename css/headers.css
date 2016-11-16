@@ -22,7 +22,7 @@ ul {
 .container {
     left: 0;
     margin-left: 100px;
-
+    opacity: 0.2;
     position: relative;
     text-align: center;
 }
