@@ -13,15 +13,19 @@
   -webkit-backface-visibility: hidden;
     text-align: center;
     position: relative;
-    margin-left: 5px;
+  padding: 10px;
+  display: inline-block;
+
   }
 
 .rslides li:first-child {
   display: block;
   float: left;
+
   }
 
 .rslides img {
   }
+
 
 

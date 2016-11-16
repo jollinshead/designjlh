@@ -14,7 +14,17 @@
     <script src="js/custom_slide.js"></script>
     <script src="js/index.js"></script>
 
+    <script src="js/jquery-photo-resize.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $(".work").photoResize({
+                bottomSpacing: 220
+            });
 
+            $(".img-desc").toggle(0);
+            $(".img-title").toggle(0);
+        });
+    </script>
 
 </head>
 
@@ -32,49 +42,47 @@
 
 <div class="container">
     <div>
-        <div class="uniform-width">
-            <div class="navigation-keys">
-                <a id='Prev' href='#' class='callbacks_nav callbacks1_nav prev hidden-link left-arrow'> ← </a>
-                <a id='More' href='#' class='toggle-text hidden-link down-arrow'> ↓ </a>
-                <a id='Next' href='#' class='callbacks_nav callbacks1_nav next hidden-link right-arrow'> → </a>
-            </div>
+        <div class="navigation-keys">
+            <a id='Prev' href='#' class='callbacks_nav callbacks1_nav prev hidden-link left-arrow'> ← </a>
+            <a id='More' href='#' class='toggle-text hidden-link down-arrow'> ↓ </a>
+            <a id='Next' href='#' class='callbacks_nav callbacks1_nav next hidden-link right-arrow'> → </a>
         </div>
-    <div>
-        <ul class="rslides uniform-width" id="slider4">
-            <li>
-                <br><img class="work" src="img/ineffable.jpg" alt=""><br><br>
-                <p class="img-title">ineffable no.2 @ london gallery west</p>
-            </li>
-            <li>
-                <br><img class="work" src="img/dot.png" alt=""><br><br>
-                <p class="img-title">dot .</p>
-            </li>
-            <li>
-                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e3d92441948995.57bb16d716dd5.jpg" alt=""><br><br>
-                <p class="img-title">la mode posters</p>
-            </li>
-            <li>
-                <br><iframe class="work" src="https://www.ccv.adobe.com/v1/player/ccv/B3sQwSahJIa/embed" frameborder="0" allowfullscreen=""></iframe><br><br>
-                <p class="img-title">carmen animation </p>
-                <p class="img-desc"> promotional animation for carmen @ royal opera house, score by georges bizet</p>
-            </li>
-            <li>
-                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/e175ad41950471.57bb21031f433.jpg" alt=""><br><br>
-                <p class="img-title">pantone</p>
-            </li>
-            <li>
-                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/86163c36636545.573cbbfd2bfd6.jpg" alt=""><br><br>
-                <p class="img-title">the body politic @ london gallery west</p>
-                <p class="img-desc">poster designs i created for our dec 2014 I&VC exhibition on the body politic, at london gallery west.</p>
+        <div>
+            <ul class="rslides" id="slider4">
+                <li>
+                    <br><img class="work" src="img/ineffable.jpg" alt=""><br><br>
+                    <p class="img-title">ineffable no.2 @ london gallery west</p>
+                </li>
+                <li>
+                    <br><img class="work" src="img/dot.png" alt=""><br><br>
+                    <p class="img-title">dot .</p>
+                </li>
+                <li>
+                    <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/e3d92441948995.57bb16d716dd5.jpg" alt=""><br><br>
+                    <p class="img-title">la mode posters</p>
+                </li>
+                <li>
+                    <br><iframe class="work" src="https://www.ccv.adobe.com/v1/player/ccv/B3sQwSahJIa/embed" frameborder="0" allowfullscreen=""></iframe><br><br>
+                    <p class="img-title">carmen animation </p>
+                    <p class="img-desc"> promotional animation for carmen @ royal opera house, score by georges bizet</p>
+                </li>
+                <li>
+                    <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/e175ad41950471.57bb21031f433.jpg" alt=""><br><br>
+                    <p class="img-title">pantone</p>
+                </li>
+                <li>
+                    <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/86163c36636545.573cbbfd2bfd6.jpg" alt=""><br><br>
+                    <p class="img-title">the body politic @ london gallery west</p>
+                    <p class="img-desc">poster designs i created for our dec 2014 I&VC exhibition on the body politic, at london gallery west.</p>
 
-            </li> <li>
-            <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/b47eb135858415.5706265937bab.jpg" alt=""><br><br>
-                <p class="img-title">uwsu arts & design society sessions</p>
-                <p class="img-desc">UWSU A&D SOCIETY'S FIRST STUDENT LIFE DRAWING CLASS</p>
-        </li>
+                </li> <li>
+                <br><img class="work" src="https://mir-s3-cdn-cf.behance.net/project_modules/source/b47eb135858415.5706265937bab.jpg" alt=""><br><br>
+                    <p class="img-title">uwsu arts & design society sessions</p>
+                    <p class="img-desc">UWSU A&D SOCIETY'S FIRST STUDENT LIFE DRAWING CLASS</p>
+            </li>
 
-        </ul>
-    </div>
+            </ul>
+        </div>
     </div>
 
 </div>

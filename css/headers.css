@@ -22,7 +22,7 @@ ul {
 .container {
     left: 0;
     margin-left: 100px;
-    min-height: 100%;
+
     position: relative;
     text-align: center;
 }
@@ -43,16 +43,16 @@ figure {
     overflow: hidden;
     word-wrap: break-word;
     font-weight: bold;
-    max-width: 350px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    display: inline-block;
 }
 
 .img-desc {
     font-size: 0.75em;
      overflow: hidden;
      word-wrap: break-word;
-     max-width: 350px;
      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+     display: inline-block;
 }
 
 .hidden-link {
@@ -85,28 +85,11 @@ font-size: 1.2em;
 }
 
 .navigation-keys {
-
-  list-style: none;
-  overflow: hidden;
-  max-width: 400px;
-  width: 400px;
   display: inline-block;
   margin-top: 30px;
+    margin-left: 41px;
 }
 
 .work {
-  max-width: 350px;
-  max-height:  525px;
-  width: 350px;
-  height:  525px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.uniform-width {
-    max-width: 538px;
-    width: 538px;
-    text-align: center;
-    position: relative;
-    display: inline-block;
 }
