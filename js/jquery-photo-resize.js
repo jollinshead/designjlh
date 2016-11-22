@@ -45,10 +45,10 @@
             $(element).attr('max-height', newHeight );
             $(element).attr('max-width', newWidth );
 
-            $(".img-desc").attr('width', newWidth );
-            $(".img-desc").attr('max-width', newWidth );
-            $(".img-title").attr('width', newWidth );
-            $(".img-title").attr('max-width', newWidth );
+            $(".img-desc").css('width', newWidth + "px" );
+            $(".img-desc").css('max-width', newWidth + "px" );
+            $(".img-title").css('width', newWidth + "px" );
+            $(".img-title").css('max-width', newWidth + "px" );
             $(".navigation-keys").css('width', newWidth + "px" );
         }
     };
