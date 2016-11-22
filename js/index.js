@@ -24,8 +24,5 @@
                 document.getElementById('Next').click();
             }
 
-            else if (event.keyCode == 40) {
-                 document.getElementById('More').click();
-            }
         }, true);
 
