@@ -22,6 +22,7 @@ ul {
 .container {
     left: 0;
     margin-left: 100px;
+    margin-right: 100px;
     opacity: 0;
     position: relative;
     text-align: center;
@@ -72,6 +73,7 @@ text-align: left;
 float:left;
 color: grey;
 font-size: 1.2em;
+position: fixed;
 }
 
 .right-arrow {
@@ -79,6 +81,7 @@ text-align: right;
 float:right;
 color: grey;
 font-size: 1.2em;
+position: fixed;
 }
 
 .navigation-keys {
