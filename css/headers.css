@@ -44,7 +44,7 @@ figure {
     overflow: hidden;
     word-wrap: break-word;
     font-weight: bold;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Arial, "Helvetica Bold", Helvetica, sans-serif;
     display: inline-block;
 }
 
@@ -74,6 +74,7 @@ float:left;
 color: grey;
 font-size: 1.2em;
 position: fixed;
+    z-index: 999999;
 }
 
 .right-arrow {
@@ -82,6 +83,7 @@ float:right;
 color: grey;
 font-size: 1.2em;
 position: fixed;
+    z-index: 999999;
 }
 
 .navigation-keys {
@@ -92,4 +94,8 @@ position: fixed;
 
 .work {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hide-var {
+    opacity: 0;
 }
