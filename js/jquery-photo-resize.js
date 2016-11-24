@@ -51,15 +51,18 @@
             $(".img-title").css('max-width', smallestMeasurement + "px" );
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
-            var prevLeft = (browserWidth / 2) - (smallestMeasurement / 2) - 10; //x - $(".left-arrow").style.width;
+            var buttonWidth = $(".navigation-button").width();
+
+            var prevLeft = (browserWidth / 2) - (smallestMeasurement / 2) - buttonWidth; //x - $(".left-arrow").style.width;
             var prevTop = browserHeight / 2; //y + (dy/2) - ($(".left-arrow").style.height / 2);
-            var nextLeft = (browserWidth / 2) + (smallestMeasurement / 2) + 30; //x + dx;
+            var nextLeft = (browserWidth / 2) + (smallestMeasurement / 2) + buttonWidth; //x + dx;
             var nextTop = browserHeight / 2; //y + (dy/2) - ($(".right-arrow").style.height / 2);
 
             $(".left-arrow").css('left', prevLeft + "px" );
             $(".left-arrow").css('top', prevTop + "px" );
             $(".right-arrow").css('left', nextLeft + "px" );
             $(".right-arrow").css('top', nextTop + "px" );
+
         }
     };
 

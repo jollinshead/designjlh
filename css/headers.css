@@ -20,7 +20,8 @@ ul {
 
 
 .container {
-    left: 0;
+    left: 0px;
+    top: 0px;
     margin-left: 100px;
     margin-right: 100px;
     opacity: 0;
@@ -33,23 +34,33 @@ figure {
 }
 
 .vertical-text {
+    position: absolute;
+    text-shadow: 2px 0 #000000;
+    font-weight: bold;
+    text-align: left;
     transform: rotate(270deg);
-    margin-top: 180px;
-    font-size: 1.4em;
+    font-size: 2.1em;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.jess-email {
+}
+.jess-about {
+}
+.jess-phone {
 }
 
 .img-title {
-    font-size: 0.8em;
+    font-size: 1.4em;
     overflow: hidden;
     word-wrap: break-word;
-    font-weight: bold;
+    font-weight: bolder;
     font-family: Arial, "Helvetica Bold", Helvetica, sans-serif;
     display: inline-block;
 }
 
 .img-desc {
-    font-size: 0.75em;
+    font-size: 1.2em;
+    font-weight: bolder;
      overflow: hidden;
      word-wrap: break-word;
      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -63,13 +74,10 @@ figure {
 }
 
 .toggle-text {
-}
-
-.toggle-about {
+    cursor: url(img/cursor.png), auto;
 }
 
 .left-arrow {
-text-align: left;
 float:left;
 color: grey;
 font-size: 1.2em;
@@ -86,10 +94,12 @@ position: fixed;
     z-index: 999999;
 }
 
-.navigation-keys {
-  display: inline-block;
-  margin-top: 30px;
-    margin-left: 41px;
+
+.navigation-button {
+    max-width: 50px;
+    max-height: 50px;
+    width: 50px;
+    height: 50px;
 }
 
 .work {
