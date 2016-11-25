@@ -40,9 +40,9 @@ figure {
     text-align: left;
     transform-origin: left top;
     transform: rotate(270deg);
-    font-size: 1vw;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    top: 190px;
+    padding-left: 5%;
+    padding-top: 2%;
 }
 .jess-email {
     border-width: 1.0px;

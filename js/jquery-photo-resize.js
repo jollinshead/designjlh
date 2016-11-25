@@ -51,6 +51,12 @@
             $(".img-title").css('max-width', smallestMeasurement + "px" );
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
+            var scaleFactor = smallestMeasurement / 400;
+            $(".navigation-button").css('width', scaleFactor*25 + "px" );
+            $(".navigation-button").css('height', scaleFactor*25 + "px" );
+            $(".img-title").css('font-size', 120 * scaleFactor + "%");
+            $(".img-desc").css('font-size', 90 * scaleFactor + "%");
+
             var buttonWidth = $(".navigation-button").width();
 
             var prevLeft = (browserWidth / 2) - (smallestMeasurement / 2) - buttonWidth; //x - $(".left-arrow").style.width;
@@ -85,7 +91,10 @@
 
             $(".vertical-text").css('top', browserHeight + "px");
             $(".vertical-text").css('left', 0 + "px");
-            $(".vertical-text").css('font-size', 100 * aboutHeight / aboutHeightMin + "%");
+            $(".vertical-text").css('font-size', 90 * aboutHeight / aboutHeightMin + "%");
+
+
+
 
         }
     };
