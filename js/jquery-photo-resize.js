@@ -63,6 +63,30 @@
             $(".right-arrow").css('left', nextLeft + "px" );
             $(".right-arrow").css('top', nextTop + "px" );
 
+
+            // Determine dimensions and position of the 'about' text
+            var aboutWidthMin = 190;
+            var aboutHeightMin = 50;
+            var aboutHeightToWidthRatio = aboutHeightMin / aboutWidthMin;
+            var aboutIdealWidthRatio = 400/1170;
+
+            var aboutWidth = browserWidth * aboutIdealWidthRatio;
+            if(aboutWidth < aboutWidthMin)
+                aboutWidth = aboutWidthMin;
+
+            var aboutHeight = aboutWidth * aboutHeightToWidthRatio;
+            if(aboutHeight > browserHeight) {
+                aboutHeight = browserHeight;
+                aboutWidth = aboutHeight / aboutHeightToWidthRatio;
+            }
+
+            $(".vertical-text").css('height', aboutHeight + "px");
+            $(".vertical-text").css('width', aboutWidth + "px");
+
+            $(".vertical-text").css('top', browserHeight + "px");
+            $(".vertical-text").css('left', 0 + "px");
+            $(".vertical-text").css('font-size', 100 * aboutHeight / aboutHeightMin + "%");
+
         }
     };
 
