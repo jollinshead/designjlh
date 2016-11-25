@@ -71,30 +71,32 @@
 
 
             // Determine dimensions and position of the 'about' text
-            var aboutWidthMin = 190;
-            var aboutHeightMin = 50;
+            var aboutHeightMin = 190, aboutWidthMin = 50;
+            var aboutPaddingWidth = 15, aboutPaddingHeight = 35;
             var aboutHeightToWidthRatio = aboutHeightMin / aboutWidthMin;
-            var aboutIdealWidthRatio = 400/1170;
+            var aboutIdealWidthRatio = 1/9;
 
             var aboutWidth = browserWidth * aboutIdealWidthRatio;
             if(aboutWidth < aboutWidthMin)
                 aboutWidth = aboutWidthMin;
 
             var aboutHeight = aboutWidth * aboutHeightToWidthRatio;
-            if(aboutHeight > browserHeight) {
-                aboutHeight = browserHeight;
+            if(aboutHeight + aboutPaddingHeight > browserHeight) {
+                aboutHeight = browserHeight - aboutPaddingHeight;
                 aboutWidth = aboutHeight / aboutHeightToWidthRatio;
             }
 
-            $(".vertical-text").css('height', aboutHeight + "px");
-            $(".vertical-text").css('width', aboutWidth + "px");
 
-            $(".vertical-text").css('top', browserHeight + "px");
-            $(".vertical-text").css('left', 0 + "px");
-            $(".vertical-text").css('font-size', 90 * aboutHeight / aboutHeightMin + "%");
+            $(".vertical-text").css('width', aboutHeight + "px");
+            $(".vertical-text").css('height', aboutWidth + "px");
+
+            $(".vertical-text").css('bottom', aboutPaddingHeight - aboutWidth + "px");
+            $(".vertical-text").css('left', aboutPaddingWidth + "px");
+            $(".vertical-text").css('font-size', 80 * aboutHeight / aboutHeightMin + "%");
 
 
-
+            //document.getElementById("debug-print").innerHTML="Height: " + browserHeight + ", Width: " + browserWidth;
+            document.getElementById("debug-print").innerHTML="aboutHeight: " + aboutHeight + ", browserHeight: " + browserHeight + ", aboutWidth: " + aboutWidth + ", browserWidth: " + browserWidth;
 
         }
     };
