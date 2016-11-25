@@ -31,14 +31,55 @@
 
         options = $.extend(defaults, options);
 
+
+
+        function getPos(el) {
+            for (var lx=0, ly=0;
+                 el != null;
+                 lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+            return {x: lx,y: ly};
+        }
+
+
+
         function updatePhotoHeight() {
             var o = options,
                 browserHeight = $(window).height(),
-                browserWidth = $(window).width();
+                browserWidth = $(window).width(),
+                docWidth = $(document).width();
 
-            var smallestMeasurement = (browserHeight < browserWidth ? browserHeight : browserWidth) - 60;
-            //var newHeight = smallestMeasurement - o.bottomSpacing < 200 ? 200 : smallestMeasurement - o.bottomSpacing;
-            //var newWidth = newHeight;
+            var smallestMeasurement = (browserHeight < browserWidth ? browserHeight : browserWidth) - 50;
+
+            // Determine dimensions and position of the 'about' text
+
+            var aboutHeightMin = 190, aboutWidthMin = 50;
+            var aboutPaddingWidth = 15, aboutPaddingHeight = smallestMeasurement / 30;
+            var aboutHeightToWidthRatio = aboutHeightMin / aboutWidthMin;
+            var aboutIdealWidthRatio = 1/9;
+
+            var aboutWidth = browserWidth * aboutIdealWidthRatio;
+            if(aboutWidth < aboutWidthMin)
+                aboutWidth = aboutWidthMin;
+
+            var aboutHeight = aboutWidth * aboutHeightToWidthRatio;
+            if(aboutHeight > aboutPaddingHeight + smallestMeasurement) {
+                aboutHeight = aboutPaddingHeight + smallestMeasurement;
+                aboutWidth = aboutHeight / aboutHeightToWidthRatio;
+            }
+
+
+            $(".vertical-text").css('width', aboutHeight + "px");
+            $(".vertical-text").css('height', aboutWidth + "px");
+
+            $(".vertical-text").css('top', aboutHeight - aboutPaddingHeight + "px");
+            $(".vertical-text").css('left', aboutPaddingWidth + "px");
+            $(".vertical-text").css('font-size', 70 * aboutHeight / aboutHeightMin + "%");
+
+            var imageTop = getPos(document.getElementById("master-work")).y;
+            $(".vertical-text").css('top', - aboutPaddingHeight + smallestMeasurement + "px");
+
+
+            // Images
 
             $(element).attr('height', smallestMeasurement );
             $(element).attr('width', smallestMeasurement );
@@ -51,7 +92,7 @@
             $(".img-title").css('max-width', smallestMeasurement + "px" );
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
-            var scaleFactor = smallestMeasurement / 400;
+            var scaleFactor = smallestMeasurement / 490;
             $(".navigation-button").css('width', scaleFactor*25 + "px" );
             $(".navigation-button").css('height', scaleFactor*25 + "px" );
             $(".img-title").css('font-size', 120 * scaleFactor + "%");
@@ -59,44 +100,33 @@
 
             var buttonWidth = $(".navigation-button").width();
 
-            var prevLeft = (browserWidth / 2) - (smallestMeasurement / 2) - buttonWidth; //x - $(".left-arrow").style.width;
+
+            // Left and Right buttons
+            var buttonDistFromImg = 1.5;
+            var containerMargin = aboutWidth + aboutPaddingHeight + (buttonDistFromImg * buttonWidth);
+            $(".container").css('margin-left', containerMargin + "px" );
+            $(".container").css('margin-right', containerMargin + "px" );
+
+            var imageLeft = getPos(document.getElementById("master-work")).x;
+
+            var prevLeft = imageLeft - (buttonDistFromImg * buttonWidth); //x - $(".left-arrow").style.width;
+            if(prevLeft < containerMargin - buttonWidth)
+                prevLeft = containerMargin - buttonWidth;
             var prevTop = browserHeight / 2; //y + (dy/2) - ($(".left-arrow").style.height / 2);
-            var nextLeft = (browserWidth / 2) + (smallestMeasurement / 2) + buttonWidth; //x + dx;
+            var nextLeft = imageLeft + smallestMeasurement + ((buttonDistFromImg - 1) * buttonWidth);
             var nextTop = browserHeight / 2; //y + (dy/2) - ($(".right-arrow").style.height / 2);
+
+            var moreLeft = prevLeft;
+            var moreTop = imageTop;
 
             $(".left-arrow").css('left', prevLeft + "px" );
             $(".left-arrow").css('top', prevTop + "px" );
             $(".right-arrow").css('left', nextLeft + "px" );
             $(".right-arrow").css('top', nextTop + "px" );
+            $(".more-arrow").css('left', moreLeft + "px" );
+            $(".more-arrow").css('top', moreTop + "px" );
 
-
-            // Determine dimensions and position of the 'about' text
-            var aboutHeightMin = 190, aboutWidthMin = 50;
-            var aboutPaddingWidth = 15, aboutPaddingHeight = 35;
-            var aboutHeightToWidthRatio = aboutHeightMin / aboutWidthMin;
-            var aboutIdealWidthRatio = 1/9;
-
-            var aboutWidth = browserWidth * aboutIdealWidthRatio;
-            if(aboutWidth < aboutWidthMin)
-                aboutWidth = aboutWidthMin;
-
-            var aboutHeight = aboutWidth * aboutHeightToWidthRatio;
-            if(aboutHeight + aboutPaddingHeight > browserHeight) {
-                aboutHeight = browserHeight - aboutPaddingHeight;
-                aboutWidth = aboutHeight / aboutHeightToWidthRatio;
-            }
-
-
-            $(".vertical-text").css('width', aboutHeight + "px");
-            $(".vertical-text").css('height', aboutWidth + "px");
-
-            $(".vertical-text").css('bottom', aboutPaddingHeight - aboutWidth + "px");
-            $(".vertical-text").css('left', aboutPaddingWidth + "px");
-            $(".vertical-text").css('font-size', 80 * aboutHeight / aboutHeightMin + "%");
-
-
-            //document.getElementById("debug-print").innerHTML="Height: " + browserHeight + ", Width: " + browserWidth;
-            document.getElementById("debug-print").innerHTML="aboutHeight: " + aboutHeight + ", browserHeight: " + browserHeight + ", aboutWidth: " + aboutWidth + ", browserWidth: " + browserWidth;
+            document.getElementById("debug-print").innerHTML="aboutPaddingHeight: " + aboutPaddingHeight;
 
         }
     };

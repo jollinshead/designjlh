@@ -43,7 +43,6 @@ figure {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .jess-email {
-    border-width: 1.0px;
 }
 .jess-about {
 }
@@ -75,7 +74,6 @@ figure {
 }
 
 .toggle-text {
-    cursor: url(img/cursor.png), auto;
 }
 
 .left-arrow {
@@ -95,6 +93,15 @@ position: fixed;
     z-index: 999999;
 }
 
+.more-arrow {
+    text-align: right;
+    float:right;
+    color: grey;
+    font-size: 1.2em;
+    position: fixed;
+    z-index: 999999;
+}
+
 
 .navigation-button {
     max-width: 50px;
@@ -105,12 +112,11 @@ position: fixed;
 
 .work {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.hide-var {
-    opacity: 0;
+    cursor: pointer;
+    z-index: 90000;
 }
 
 .work-head {
-
+    cursor: url(../img/cursor.png), default;
+    z-index: 900000;
 }

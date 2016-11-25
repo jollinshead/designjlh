@@ -19,21 +19,33 @@ $(function () {
 
 });
 
+
 $(function () {
 
-    $(".toggle-text").click(function () {
-        $(".img-desc").toggle(200);
-        $(".img-title").toggle(200);
+    $(".toggle-text-on").click(function () {
 
-        $(".left-arrow").toggle(200);
-        $(".right-arrow").toggle(200);
+        $(".img-desc").show(0);
+        $(".img-title").show(0);
 
-        if ($(".hide-var").css('opacity') == '0') {
-            $(".hide-var").css('opacity', '1');
-        }
-        else {
-            $(".hide-var").css('opacity', '0');
-        }
+        $(".left-arrow").hide(0);
+        $(".right-arrow").hide(0);
+        $(".more-arrow").show(0);
+
+        $(".work-head").css("z-index: 1");
+
+    });
+
+    $(".toggle-text-off").click(function () {
+
+        $(".img-desc").hide(0);
+        $(".img-title").hide(0);
+
+        $(".left-arrow").show(0);
+        $(".right-arrow").show(0);
+        $(".more-arrow").hide(0);
+
+        $(".work-head").css("z-index: 900000");
+
     });
 });
 
