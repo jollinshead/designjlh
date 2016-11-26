@@ -5,7 +5,7 @@ $(function () {
         auto: false,
         pager: false,
         nav: true,
-        speed: 250,
+        speed: 0,
         prevText: "←",   // String: Text for the "previous" button
         nextText: "→",       // String: Text for the "next" button
         namespace: "callbacks",
@@ -19,10 +19,12 @@ $(function () {
 
 });
 
-
+var isExpanded = 0;
 $(function () {
 
     $(".toggle-text-on").click(function () {
+
+        isExpanded = 1;
 
         $(".img-desc").show(0);
         $(".img-title").show(0);
@@ -31,11 +33,13 @@ $(function () {
         $(".right-arrow").hide(0);
         $(".more-arrow").show(0);
 
-        $(".work-head").css("z-index: 1");
+        $(".work-head").css("cursor", "default");
 
     });
 
     $(".toggle-text-off").click(function () {
+
+        isExpanded = 0;
 
         $(".img-desc").hide(0);
         $(".img-title").hide(0);
@@ -44,9 +48,16 @@ $(function () {
         $(".right-arrow").show(0);
         $(".more-arrow").hide(0);
 
-        $(".work-head").css("z-index: 900000");
-
+        $(".work-head").css('cursor', 'url(img/cursor.png) 15 15, crosshair');
     });
+
+    $(".work").click(function () {
+
+            if(isExpanded == 1){
+
+            }
+
+        });
 });
 
 $(function () {
@@ -58,12 +69,12 @@ $(function () {
 
 
 document.addEventListener('keydown', function (event) {
-    if ($(".hide-var").css('opacity') == '0') {
-        if (event.keyCode == 37) {
+    if (isExpanded == 0) {
+        if (event.keyCode == 37 && isExpanded == 0) {
             document.getElementById('Prev').click();
 
         }
-        else if (event.keyCode == 39) {
+        else if (event.keyCode == 39 && isExpanded == 0) {
             document.getElementById('Next').click();
         }
     }

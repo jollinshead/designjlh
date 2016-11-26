@@ -48,7 +48,7 @@
                 browserWidth = $(window).width(),
                 docWidth = $(document).width();
 
-            var smallestMeasurement = (browserHeight < browserWidth ? browserHeight : browserWidth) - 50;
+            var smallestMeasurement = (browserHeight < (browserWidth * 0.74) ? browserHeight : (browserWidth * 0.74)) - 50;
 
             // Determine dimensions and position of the 'about' text
 
@@ -112,12 +112,12 @@
             var prevLeft = imageLeft - (buttonDistFromImg * buttonWidth); //x - $(".left-arrow").style.width;
             if(prevLeft < containerMargin - buttonWidth)
                 prevLeft = containerMargin - buttonWidth;
-            var prevTop = browserHeight / 2; //y + (dy/2) - ($(".left-arrow").style.height / 2);
+            var prevTop = smallestMeasurement * 0.55 - (buttonWidth / 2); //y + (dy/2) - ($(".left-arrow").style.height / 2);
             var nextLeft = imageLeft + smallestMeasurement + ((buttonDistFromImg - 1) * buttonWidth);
-            var nextTop = browserHeight / 2; //y + (dy/2) - ($(".right-arrow").style.height / 2);
+            var nextTop = smallestMeasurement * 0.55 - (buttonWidth / 2); //y + (dy/2) - ($(".right-arrow").style.height / 2);
 
             var moreLeft = prevLeft;
-            var moreTop = imageTop;
+            var moreTop = smallestMeasurement * 0.25 - (buttonWidth / 2);
 
             $(".left-arrow").css('left', prevLeft + "px" );
             $(".left-arrow").css('top', prevTop + "px" );
@@ -126,7 +126,7 @@
             $(".more-arrow").css('left', moreLeft + "px" );
             $(".more-arrow").css('top', moreTop + "px" );
 
-            document.getElementById("debug-print").innerHTML="aboutPaddingHeight: " + aboutPaddingHeight;
+            //document.getElementById("debug-print").innerHTML="aboutPaddingHeight: " + aboutPaddingHeight;
 
         }
     };
