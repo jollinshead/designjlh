@@ -86,6 +86,8 @@
             $(element).attr('max-height', smallestMeasurement );
             $(element).attr('max-width', smallestMeasurement );
 
+            $(".rslides").css('width', smallestMeasurement + "px" );
+            $(".rslides").css('max-width', smallestMeasurement + "px" );
             $(".img-desc").css('width', smallestMeasurement + "px" );
             $(".img-desc").css('max-width', smallestMeasurement + "px" );
             $(".img-title").css('width', smallestMeasurement + "px" );
@@ -127,7 +129,7 @@
             $(".more-arrow").css('top', moreTop + "px" );
 
             //document.getElementById("debug-print").innerHTML="aboutPaddingHeight: " + aboutPaddingHeight;
-
+            $("html").css('opacity','1');
         }
     };
 
