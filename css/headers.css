@@ -39,7 +39,7 @@ figure {
     text-align: left;
     transform-origin: left top;
     transform: rotate(270deg);
-    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 }
 .jess-email {
 }
@@ -53,7 +53,7 @@ figure {
     overflow: hidden;
     word-wrap: break-word;
     font-weight: bolder;
-    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
     display: inline-block;
     text-align: left;
 }
@@ -63,7 +63,7 @@ figure {
     font-weight: bolder;
      overflow: hidden;
      word-wrap: break-word;
-     font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+     font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
      display: inline-block;
      text-align: left;
 

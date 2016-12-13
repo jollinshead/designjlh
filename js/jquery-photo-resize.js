@@ -53,7 +53,7 @@
             // Determine dimensions and position of the 'about' text
 
             var aboutHeightMin = 190, aboutWidthMin = 50;
-            var aboutPaddingWidth = 15, aboutPaddingHeight = smallestMeasurement / 30;
+            var aboutPaddingWidth = 15, aboutPaddingHeight =0;// smallestMeasurement / 30;
             var aboutHeightToWidthRatio = aboutHeightMin / aboutWidthMin;
             var aboutIdealWidthRatio = 1/9;
 
@@ -88,15 +88,15 @@
 
             $(".rslides").css('width', smallestMeasurement + "px" );
             $(".rslides").css('max-width', smallestMeasurement + "px" );
-            $(".img-desc").css('width', smallestMeasurement + "px" );
-            $(".img-desc").css('max-width', smallestMeasurement + "px" );
-            $(".img-title").css('width', smallestMeasurement + "px" );
-            $(".img-title").css('max-width', smallestMeasurement + "px" );
+            $(".img-desc").css('width', (smallestMeasurement*0.99) + "px" );
+            $(".img-desc").css('max-width', (smallestMeasurement*0.99) + "px" );
+            $(".img-title").css('width', (smallestMeasurement*0.99) + "px" );
+            $(".img-title").css('max-width', (smallestMeasurement*0.99) + "px" );
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
             var scaleFactor = smallestMeasurement / 490;
-            $(".navigation-button").css('width', scaleFactor*25 + "px" );
-            $(".navigation-button").css('height', scaleFactor*25 + "px" );
+            $(".navigation-button").css('width', scaleFactor*15 + "px" );
+            $(".navigation-button").css('height', scaleFactor*15 + "px" );
             $(".img-title").css('font-size', 120 * scaleFactor + "%");
             $(".img-desc").css('font-size', 90 * scaleFactor + "%");
 
@@ -104,22 +104,22 @@
 
 
             // Left and Right buttons
-            var buttonDistFromImg = 1.5;
+            var buttonDistFromImg = 1.1;
             var containerMargin = aboutWidth + aboutPaddingHeight + (buttonDistFromImg * buttonWidth);
             $(".container").css('margin-left', containerMargin + "px" );
             $(".container").css('margin-right', containerMargin + "px" );
 
             var imageLeft = getPos(document.getElementById("master-work")).x;
 
-            var prevLeft = imageLeft - (buttonDistFromImg * buttonWidth); //x - $(".left-arrow").style.width;
+            var prevLeft = imageLeft - (buttonDistFromImg * 1.33 * buttonWidth); //x - $(".left-arrow").style.width;
             if(prevLeft < containerMargin - buttonWidth)
                 prevLeft = containerMargin - buttonWidth;
-            var prevTop = smallestMeasurement * 0.55 - (buttonWidth / 2); //y + (dy/2) - ($(".left-arrow").style.height / 2);
+            var prevTop = smallestMeasurement * 0.1 - (buttonWidth / 2); //y + (dy/2) - ($(".left-arrow").style.height / 2);
             var nextLeft = imageLeft + smallestMeasurement + ((buttonDistFromImg - 1) * buttonWidth);
-            var nextTop = smallestMeasurement * 0.55 - (buttonWidth / 2); //y + (dy/2) - ($(".right-arrow").style.height / 2);
+            var nextTop = smallestMeasurement * 0.1 - (buttonWidth / 2); //y + (dy/2) - ($(".right-arrow").style.height / 2);
 
-            var moreLeft = prevLeft;
-            var moreTop = smallestMeasurement * 0.25 - (buttonWidth / 2);
+            var moreLeft = nextLeft;
+            var moreTop = nextTop * 2.2; //smallestMeasurement * 0.1 - (buttonWidth / 2);
 
             $(".left-arrow").css('left', prevLeft + "px" );
             $(".left-arrow").css('top', prevTop + "px" );
