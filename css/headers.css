@@ -19,6 +19,11 @@ ul {
     display: inline-block;
 }
 
+iframe {
+    width: 640px;
+    height: 500px;
+}
+
 
 .container {
     left: 0px;
