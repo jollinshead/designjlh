@@ -81,9 +81,9 @@
 
             // Images
 
-            $(element).attr('height', smallestMeasurement );
+            //$(element).attr('height', smallestMeasurement );
             $(element).attr('width', smallestMeasurement );
-            $(element).attr('max-height', smallestMeasurement );
+            //$(element).attr('max-height', smallestMeasurement );
             $(element).attr('max-width', smallestMeasurement );
 
             $(".rslides").css('width', smallestMeasurement + "px" );
@@ -98,7 +98,7 @@
             $(".navigation-button").css('width', scaleFactor*15 + "px" );
             $(".navigation-button").css('height', scaleFactor*15 + "px" );
             $(".img-title").css('font-size', 120 * scaleFactor + "%");
-            $(".img-desc").css('font-size', 90 * scaleFactor + "%");
+            $(".img-desc").css('font-size', 70 * scaleFactor + "%");
 
             var buttonWidth = $(".navigation-button").width();
 
