@@ -29,7 +29,7 @@ $(function () {
         $(".img-desc").show(0);
         $(".img-title").show(0);
 
-        $(".left-arrow").hide(0);
+        $(".home-button").show(0);
         $(".right-arrow").hide(0);
         $(".more-arrow").show(0);
 
@@ -44,7 +44,7 @@ $(function () {
         $(".img-desc").hide(0);
         $(".img-title").hide(0);
 
-        $(".left-arrow").show(0);
+        $(".home-button").hide(0);
         $(".right-arrow").show(0);
         $(".more-arrow").hide(0);
 
