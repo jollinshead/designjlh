@@ -95,12 +95,12 @@
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
             var scaleFactor = smallestMeasurement / 490;
-            // Right arrow = 17 x 78
-            var widthRightArrow = browserWidth * 17 / 1920;
-            var heightRightArrow = widthRightArrow * 78 / 17;
-            // Down arrow = 33 x 60
-            var widthDownArrow = browserWidth * 33 / 1920;
-            var heightDownArrow = widthDownArrow * 60 / 33;
+            // Right arrow = 83 x 71
+            var widthRightArrow = browserWidth * 83 / 1920;
+            var heightRightArrow = widthRightArrow * 71 / 83;
+            // Down arrow = 41 x 108
+            var widthDownArrow = browserWidth * 41 / 1920;
+            var heightDownArrow = widthDownArrow * 108 / 41;
 
             $(".right-arrow").css('background-size', widthRightArrow + "px " + heightRightArrow + "px" );
             $(".right-arrow").css('height', smallestMeasurement + "px" );
