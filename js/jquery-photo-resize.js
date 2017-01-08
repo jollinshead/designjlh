@@ -96,10 +96,10 @@
 
             var scaleFactor = smallestMeasurement / 490;
             // Right arrow = 83 x 71
-            var widthRightArrow = browserWidth * 83 / 1920;
+            var widthRightArrow = smallestMeasurement * 83 / 1000;
             var heightRightArrow = widthRightArrow * 71 / 83;
             // Down arrow = 41 x 108
-            var widthDownArrow = browserWidth * 41 / 1920;
+            var widthDownArrow = smallestMeasurement * 41 / 1000;
             var heightDownArrow = widthDownArrow * 108 / 41;
 
             $(".right-arrow").css('background-size', widthRightArrow + "px " + heightRightArrow + "px" );
