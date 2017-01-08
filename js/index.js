@@ -33,7 +33,6 @@ $(function () {
         $(".right-arrow").hide(0);
         $(".more-arrow").show(0);
 
-        $(".work-head").css("cursor", "default");
 
     });
 
@@ -48,7 +47,6 @@ $(function () {
         $(".right-arrow").show(0);
         $(".more-arrow").hide(0);
 
-        $(".work-head").css('cursor', 'url(img/cursor.png) 15 15, crosshair');
     });
 
     $(".work").click(function () {

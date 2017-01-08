@@ -2,7 +2,9 @@ html {
     height: 101%;
     margin: 0;
     opacity: 0;
+    cursor: url(../img/cursor.png) 15 15, crosshair;
 }
+
 
 aside {
     background: #FFFFFF;
@@ -78,7 +80,7 @@ text-shadow: 1px 0px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000, 0p
 .hidden-link {
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    cursor: url(../img/cursor.png) 15 15, crosshair;
 }
 
 .toggle-text {
@@ -127,9 +129,9 @@ background-size: 17px 78px;
 }
 
 .work {
-    cursor: default;
     z-index: 999999;
-}
+    cursor: url(../img/cursor.png) 15 15, crosshair;
+    }
 
 .work-head {
     cursor: url(../img/cursor.png) 15 15, crosshair;
