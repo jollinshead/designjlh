@@ -95,36 +95,44 @@
             $(".navigation-keys").css('width', smallestMeasurement + "px" );
 
             var scaleFactor = smallestMeasurement / 490;
-            $(".navigation-button").css('width', scaleFactor*15 + "px" );
-            $(".navigation-button").css('height', scaleFactor*15 + "px" );
+            // Right arrow = 17 x 78
+            var widthRightArrow = browserWidth * 17 / 1920;
+            var heightRightArrow = widthRightArrow * 78 / 17;
+            // Down arrow = 33 x 60
+            var widthDownArrow = browserWidth * 33 / 1920;
+            var heightDownArrow = widthDownArrow * 60 / 33;
+
+            $(".right-arrow").css('background-size', widthRightArrow + "px " + heightRightArrow + "px" );
+            $(".right-arrow").css('height', smallestMeasurement + "px" );
+            $(".right-arrow").css('width', widthRightArrow + "px" );
+
+            $(".more-arrow").css('background-size', widthDownArrow + "px " + heightDownArrow + "px" );
+            $(".more-arrow").css('height', browserHeight + "px" );
+            $(".more-arrow").css('width', widthDownArrow + "px" );
+
             $(".img-title").css('font-size', 120 * scaleFactor + "%");
-            $(".img-desc").css('font-size', 70 * scaleFactor + "%");
+            $(".img-desc").css('font-size', 90 * scaleFactor + "%");
+
+            // Home button = 248 x 248
+            $(".home-button").css('height', aboutWidth * 0.5 + "px" );
+            $(".home-button").css('width', aboutWidth * 0.5 + "px" );
 
             var buttonWidth = $(".navigation-button").width();
 
 
             // Left and Right buttons
-            var buttonDistFromImg = 1.1;
+            var buttonDistFromImg = 2;
             var containerMargin = aboutWidth + aboutPaddingHeight + (buttonDistFromImg * buttonWidth);
             $(".container").css('margin-left', containerMargin + "px" );
             $(".container").css('margin-right', containerMargin + "px" );
 
             var imageLeft = getPos(document.getElementById("master-work")).x;
 
-            var prevLeft = imageLeft - (buttonDistFromImg * 1.33 * buttonWidth); //x - $(".left-arrow").style.width;
-            if(prevLeft < containerMargin - buttonWidth)
-                prevLeft = containerMargin - buttonWidth;
-            var prevTop = smallestMeasurement * 0.1 - (buttonWidth / 2); //y + (dy/2) - ($(".left-arrow").style.height / 2);
-            var nextLeft = imageLeft + smallestMeasurement + ((buttonDistFromImg - 1) * buttonWidth);
-            var nextTop = smallestMeasurement * 0.1 - (buttonWidth / 2); //y + (dy/2) - ($(".right-arrow").style.height / 2);
+            var moreLeft = 0.55 * (browserWidth - (imageLeft + smallestMeasurement)) + (imageLeft + smallestMeasurement);
+            var moreTop = smallestMeasurement * 0.05; //smallestMeasurement * 0.1 - (buttonWidth / 2);
 
-            var moreLeft = nextLeft;
-            var moreTop = nextTop * 2.2; //smallestMeasurement * 0.1 - (buttonWidth / 2);
-
-            $(".left-arrow").css('left', prevLeft + "px" );
-            $(".left-arrow").css('top', prevTop + "px" );
-            $(".right-arrow").css('left', nextLeft + "px" );
-            $(".right-arrow").css('top', nextTop + "px" );
+            $(".right-arrow").css('left', moreLeft + "px" );
+            $(".right-arrow").css('top', moreTop + "px" );
             $(".more-arrow").css('left', moreLeft + "px" );
             $(".more-arrow").css('top', moreTop + "px" );
 

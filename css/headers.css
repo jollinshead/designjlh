@@ -40,7 +40,6 @@ figure {
 
 .vertical-text {
     position: fixed;
-    font-weight: bolder;
     text-align: left;
     transform-origin: left top;
     transform: rotate(270deg);
@@ -54,18 +53,16 @@ figure {
 }
 
 .img-title {
-    font-size: 1.3em;
+    font-size: 1.2em;
     overflow: hidden;
     word-wrap: break-word;
-    font-weight: bolder;
     font-family: Arial, sans-serif;
     display: inline-block;
     text-align: left;
 }
 
 .img-desc {
-    font-size: 0.75em;
-    font-weight: bolder;
+    font-size: 1.05em;
      overflow: hidden;
      word-wrap: break-word;
      font-family: Arial, sans-serif;;
@@ -87,12 +84,14 @@ text-shadow: 1px 0px 0px #000000, -1px 0px 0px #000000, 0px -1px 0px #000000, 0p
 .toggle-text {
 }
 
-.left-arrow {
+.home-button {
 float:left;
 color: grey;
 font-size: 1.2em;
 position: fixed;
-    z-index: 999999;
+top: 10px;
+left: 10px;
+    z-index: 9999999;
 }
 
 .right-arrow {
@@ -101,7 +100,10 @@ float:right;
 color: grey;
 font-size: 1.2em;
 position: fixed;
-    z-index: 999999;
+z-index: 999999;
+background-image: url("../img/arrows right.png");
+background-repeat: repeat-y;
+background-size: 17px 78px;
 }
 
 .more-arrow {
@@ -111,6 +113,9 @@ position: fixed;
     font-size: 1.2em;
     position: fixed;
     z-index: 999999;
+    background-image: url("../img/arrows down.png");
+    background-repeat: repeat-y;
+    background-size: 33px 60px;
 }
 
 
