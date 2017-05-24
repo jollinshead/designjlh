@@ -1,29 +1,130 @@
+html {
+    height: 101%;
+    margin: 0;
+    opacity: 1;
+    cursor: url(../img/cursor.png) 15 15, crosshair;
+}
+
 body {
-    height:100%;
-    width:100%;
-    margin:0;padding:0;
+    cursor: url(../img/cursor.png) 15 15, crosshair;
+}
+
+a {
+    cursor: url(../img/cursor.png) 15 15, crosshair;
+}
+
+.vertical-text {
+    position: fixed;
+    text-align: left;
+    transform-origin: right top;
+    transform: translate(-90%, 200%) rotate(270deg);
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    font-size: 2.1vw;
+    z-index: 999;
+}
+
+#Home {
+    position: fixed;
+    left: 3%;
+    top: 3%;
+    min-width: 4%;
+    max-width: 4%;
+    height:auto;
+    display: none;
+}
+
+.img-title {
+    font-size: 1.7em;
+    font-size: 1.7vw;
+
+}
+
+.work {
+    word-wrap: break-word;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    text-align: left;
     max-width: 100%;
-    overflow-x: hidden;
+    min-width: 100%;
+    padding: 2%;
 }
 
-.item {
-    width:20%;
-    height:100%;
-    float:left;
-    background-color:#ddd;
+.img-desc {
+    font-size: 1.3px;
+    font-size: 1.3vw;
 }
 
-
-.content {
-    background-color: #ffffff;
-    position:relative;
+.hidden-link {
+    color: black;
+    text-decoration: none;
+    cursor: url(../img/cursor.png) 15 15, crosshair;
 }
 
-.selected {
-    background:#ffffff;
-    font-weight:700;
+.toggle-text {
 }
 
-.clear {
-    clear:both;
+img {
+    max-width: 100%;
+    min-width: 100%;
+    height: auto;
+}
+
+iframe {
+    width: 640px;
+    height: 500px;
+    padding-top: 75%;
+}
+
+.very-specific-design {
+    text-align: center;
+    background: white;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+
+.scaleable-wrapper {
+    resize: both;
+    position: relative;
+}
+
+.collection:target {
+    display: block;
+}
+
+.collection {
+    top: 10%;
+    position: absolute;
+    display: none;
+}
+
+.collage {
+    top: 20%;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    padding: 1%;
+}
+
+.thumbnail:hover {
+    height: auto;
+}
+
+.thumbnail {
+    height: 60px;
+    overflow: hidden;
+    outline: none;
+}
+
+.gallery {
+    text-align: center;
+    background: white;
+    position: relative;
+    left: 25%;
+    width: 50%;
+    top: 5%;
+    display: block;
 }
