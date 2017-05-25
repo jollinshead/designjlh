@@ -16,12 +16,12 @@
     <script>
         function defaultPageLoad() {
             var x = location.hash.substring(1);
-            var inpObj = document.getElementById(x);
-            document.getElementById('collage').style.display='block';
-            document.getElementById('Home').style.display='none';
-            if (inpObj != null && x != "collage") {
+            if (document.getElementById(x) != null && x != "collage") {
                 document.getElementById('collage').style.display='none';
                 document.getElementById('Home').style.display='block';
+            } else {
+                document.getElementById('collage').style.display='block';
+                document.getElementById('Home').style.display='none';
             }
         }
     </script>
