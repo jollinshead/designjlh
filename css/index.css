@@ -107,6 +107,7 @@ iframe {
     width: 50%;
     left: 25%;
     padding: 1%;
+    display: none;
 }
 
 .thumbnail:hover {

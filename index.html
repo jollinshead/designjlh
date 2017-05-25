@@ -13,8 +13,21 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/scaleablewrapper.js"></script>
+    <script>
+        function defaultPageLoad() {
+            var x = location.hash.substring(1);
+            var inpObj = document.getElementById(x);
+            document.getElementById('collage').style.display='block';
+            document.getElementById('Home').style.display='none';
+            if (inpObj != null && x != "collage") {
+                document.getElementById('collage').style.display='none';
+                document.getElementById('Home').style.display='block';
+            }
+        }
+    </script>
 
 </head>
+<body onpageshow="defaultPageLoad()" onhashchange="defaultPageLoad()">
 <a id='Home' href='#' onclick="this.style.display='none'; document.getElementById('collage').style.display='block';">
     <img src="img/home button.png" alt=""> </a>
 <div class='vertical-text'>
