@@ -17,16 +17,12 @@
         function defaultPageLoad() {
             var x = location.hash.substring(1);
             var inpObj = document.getElementById(x);
+            document.getElementById('collage').style.display='block';
+            document.getElementById('Home').style.display='none';
             if (inpObj != null && x != "collage") {
-                document.getElementById('collage').style.display = 'none';
-                document.getElementById('gallery').style.display = 'block';
-                document.getElementById('gallery').style.display = 'block';
-            } else {
-                document.getElementById('collage').style.display = 'block';
-                document.getElementById('Home').style.display = 'none';
-                document.getElementById('gallery').style.display = 'none';
+                document.getElementById('collage').style.display='none';
+                document.getElementById('Home').style.display='block';
             }
-
         }
     </script>
 
@@ -110,7 +106,7 @@
 
 
         </div>
-        <div id="gallery" class="gallery">
+        <div class="gallery">
             <div id="white" class="collection">
                 <p>
                     <a class="work img-title">white project</a>
