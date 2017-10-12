@@ -43,7 +43,7 @@ a {
 h1 {
     word-wrap: break-word;
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
-	font-size: 80px;
+	font-size: 100px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 800;
@@ -51,10 +51,31 @@ h1 {
 
     display: inline-block;
     text-align: left;
-    max-width: 100%;
+    max-width: 50%;
     min-width: 100%;
     padding: 2%;
 	} 
+
+a:link {
+    color: black;
+}
+
+
+a:visited {
+    color: black;
+}
+
+
+a:hover {
+    color: black;
+text-decoration: underline;
+}
+
+
+a:active {
+    color: black;
+	 text-decoration: underline;
+}
 
 .img-desc {
     font-size: 1.3px;
@@ -85,7 +106,7 @@ iframe {
 .very-specific-design {
     text-align: left;
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
-	font-size: 80px;
+	font-size: 100px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 800;
