@@ -40,7 +40,7 @@ a {
 
 }
 
-.work {
+h1 {
     word-wrap: break-word;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 24px;
@@ -54,7 +54,7 @@ a {
     max-width: 100%;
     min-width: 100%;
     padding: 2%;
-}
+	} 
 
 .img-desc {
     font-size: 1.3px;
