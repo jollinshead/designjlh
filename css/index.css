@@ -18,7 +18,7 @@ a {
     text-align: left;
     transform-origin: right top;
     transform: translate(-90%, 200%) rotate(270deg);
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
     font-size: 22px;
     font-size: 2.1vw;
     z-index: 999;
@@ -42,7 +42,7 @@ a {
 
 h1 {
     word-wrap: break-word;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 	font-size: 80px;
 	font-style: normal;
 	font-variant: normal;
@@ -84,7 +84,7 @@ iframe {
 
 .very-specific-design {
     text-align: left;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 	font-size: 80px;
 	font-style: normal;
 	font-variant: normal;
