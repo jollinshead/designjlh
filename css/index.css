@@ -42,11 +42,11 @@ a {
 
 h1 {
     word-wrap: break-word;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 24px;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 40px;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: 500;
+	font-weight: 800;
 	line-height: 26.4px;
 
     display: inline-block;
@@ -83,7 +83,13 @@ iframe {
 }
 
 .very-specific-design {
-    text-align: right;
+    text-align: left;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 800;
+	line-height: 26.4px;
     background: white;
     position: relative;
     left: 50%;
