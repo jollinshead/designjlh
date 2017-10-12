@@ -13,18 +13,6 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/scaleablewrapper.js"></script>
-    <script>
-        function defaultPageLoad() {
-            var x = location.hash.substring(1);
-            if (document.getElementById(x) != null && x != "collage") {
-                document.getElementById('collage').style.display='none';
-                document.getElementById('Home').style.display='block';
-            } else {
-                document.getElementById('collage').style.display='block';
-                document.getElementById('Home').style.display='none';
-            }
-        }
-    </script>
 
 </head>
 <body onpageshow="defaultPageLoad()" onhashchange="defaultPageLoad()">
