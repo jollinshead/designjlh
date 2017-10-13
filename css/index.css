@@ -45,14 +45,15 @@ h1 {
     min-width: 100%;
     padding: 2%;
 	} 
-
-a:link {
-    color: black;
+a.navlink:visited 
+a.navlink:hover
+{
+    background-color: #3366FF; 
 }
 
-
-a:visited {
-    color: black;
+a:link
+a:visited
+{  color: black;
 }
 
 
@@ -62,10 +63,6 @@ text-decoration: underline;
 }
 
 
-a:active {
-    color: black;
-	 text-decoration: underline;
-}
 
 .img-desc {
     font-size: 1.3px;
