@@ -142,3 +142,10 @@ iframe {
     padding: 1%;
     display: block;
 }
+
+body {
+    background-image: url("BG.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
