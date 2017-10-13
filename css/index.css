@@ -7,6 +7,10 @@ html {
 
 body {
     cursor: url(../img/cursor.png) 15 15, crosshair;
+	  background-image: url("designjlh/img/BG.gif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
 }
 
 a {
@@ -143,9 +147,3 @@ iframe {
     display: block;
 }
 
-body {
-    background-image: url("BG.gif");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-attachment: fixed;
-}
