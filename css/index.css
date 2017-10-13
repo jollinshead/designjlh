@@ -65,7 +65,7 @@ a {
 }
 
 
-h1 {
+.h1 {
     word-wrap: break-word;
 	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif
 	font-size: 100px;
