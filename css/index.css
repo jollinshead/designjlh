@@ -29,11 +29,6 @@ a {
     display: none;
 }
 
-.img-title {
-    font-size: 1.7em;
-    font-size: 1.7vw;
-
-}
 
 h1 {
     word-wrap: break-word;
@@ -86,17 +81,6 @@ a:active {
 .toggle-text {
 }
 
-img {
-    max-width: 100%;
-    min-width: 100%;
-    height: auto;
-}
-
-iframe {
-    width: 640px;
-    height: 500px;
-    padding-top: 75%;
-}
 
 .very-specific-design {
     text-align: left;
