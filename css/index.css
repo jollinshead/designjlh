@@ -52,6 +52,11 @@ a {
     cursor: url(../img/cursor.png) 15 15, crosshair;
 }
 
+ span {
+      color: Black;
+      cursor: pointer;
+      text-decoration: underline;
+    }
 
 
 #Home {
