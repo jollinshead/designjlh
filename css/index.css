@@ -18,7 +18,6 @@ body {
 </div>
 }
 
-
 * { box-sizing: border-box; }
 .video-background {
   background: #000;
@@ -55,7 +54,6 @@ body {
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
 }
-
 
 a {
     cursor: url(../img/cursor.png) 15 15, crosshair;
