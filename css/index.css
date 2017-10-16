@@ -5,6 +5,14 @@ html {
     cursor: url(../img/cursor.png) 15 15, crosshair;
 }
 
+{
+font-family: 'Arimo', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Coda Caption', sans-serif;
+font-family: 'Francois One', sans-serif;
+font-family: 'Archivo Black', sans-serif;
+}
+
 a {
     cursor: url(../img/cursor.png) 15 15, crosshair;
 }
