@@ -24,19 +24,6 @@ Home {
     
 }
 
-.videoContainer 
-{
-    position:absolute;
-    height:100%;
-    width:100%;
-    overflow: hidden;
-}
-
-.videoContainer video 
-{
-    min-width: 100%;
-    min-height: 100%;
-}
 
 div {
     align-items: right;
