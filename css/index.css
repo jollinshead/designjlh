@@ -17,6 +17,13 @@ Home {
     text-decoration: underline;
     
 }
+
+.body {
+    font-family: verdana;
+    font-size: 300%;
+    
+}
+
 .videoContainer 
 {
     position:absolute;
