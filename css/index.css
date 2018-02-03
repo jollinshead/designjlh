@@ -20,7 +20,7 @@ Home {
 
 .body {
     font-family: verdana;
-    font-size: 300%;
+    font-size: 100px;
     
 }
 
@@ -40,7 +40,7 @@ div {
 
 h1 {
      font-weight: 400;
-     font-size: 30px;
+     font-size: 100px;
      text-align: left;
      font-family: 'Rubik', sans-serif;
      line-height: 100%;
