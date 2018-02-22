@@ -24,15 +24,38 @@ Home {
 
 .body {
   
-    height:100%;
-    width:100%;
-    margin:0;padding:0;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
     max-width: 100%;
     overflow-x: hidden;
     font-size: 2rem;
     font-family: Arial, sans-serif;
+    colour:#212529;
 }
 
+
+.content {
+    background-color: #ffffff;
+    position:relative;
+}
+
+.selected {
+    background:#ffffff;
+    font-weight:700;
+}
+
+.clear {
+    clear:both;
+}
+
+:hover {
+    color: #212529
+    text-decoration: italic;
+    font-family: Arial;sans-serif;
+    font-size: 2rem;
+}
 
 div {
     align-items: right;
