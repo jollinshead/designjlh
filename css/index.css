@@ -34,6 +34,18 @@ Home {
     colour:#212529;
 }
 
+.h1 {
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    colour:#212529;
+}
+
 
 .content {
     background-color: #ffffff;
@@ -49,14 +61,14 @@ Home {
     clear:both;
 }
 
-:hover {
+.hover {
     color: #212529
     text-decoration: italic;
     font-family: Arial;sans-serif;
     font-size: 2rem;
 }
 
-div {
+.div {
     align-items: right;
     padding-top: auto;
     padding-right: auto;
