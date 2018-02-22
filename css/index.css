@@ -4,6 +4,7 @@ html {
     height: 100%;
     top: 0;
     left: 0;
+    font-size: 100%;
 }
 
 Home {
@@ -13,9 +14,12 @@ Home {
 }
 
 .link {
-    color: black;
+    color: #212529;
     text-decoration: underline;
-    
+    font-size: 2rem;
+    width: 100%;
+    margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .body {
@@ -25,10 +29,8 @@ Home {
     margin:0;padding:0;
     max-width: 100%;
     overflow-x: hidden;
-    font-size: 60px;
+    font-size: 2rem;
     font-family: Arial, sans-serif;
-
-    
 }
 
 
@@ -38,28 +40,12 @@ div {
     padding-right: auto;
     padding-bottom: auto;
     padding-left: auto;
-    overflow: sroll;
+    overflow: scroll;
     height: 150px;
     max-width: 100%;
     
 }
 
-
-h1 {
-     font-weight: 400;
-     font-size: 100px;
-     text-align: left;
-     font-family: 'Rubik', sans-serif;
-     line-height: 100%;
-     margin: auto;
-    padding: 10px;
-    max-width: 55%;
-    position: fixed;
-    float: left;
-    top: 0;
-     color:black;
-    
-    }
 
        &:nth-child(1) {
          color:#00a0e3;
