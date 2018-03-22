@@ -29,9 +29,8 @@ Home {
     padding:0;
     max-width: 100%;
     overflow-x: hidden;
-    font-size: 2rem;
-    font-family: "Arial", sans-serif;
-    colour:#212529;
+    font-size: 50px;
+    font colour: "black"
 }
 
 .content {
