@@ -14,12 +14,8 @@ Home {
 }
 
 .href {
-    color: #212529;
+    color: #000000;
     text-decoration: underline;
-    font-size: 2rem;
-    width: 100%;
-    margin: 0;
-    font-family: "Helvetica", sans-serif;
 }
 
 .body {
@@ -47,12 +43,6 @@ Home {
     clear:both;
 }
 
-.hover {
-    color: #212529
-    text-decoration: italic;
-    font-family: Arial;sans-serif;
-    font-size: 2rem;
-}
 
 .div {
     align-items: right;
